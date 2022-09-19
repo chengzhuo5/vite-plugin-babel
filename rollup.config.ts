@@ -26,7 +26,7 @@ const bundle = (format: FormatType) => {
 
 		plugins: format == 'dts' ? [dts()] : [esbuild({ target: 'node12' })],
 
-		external: id => !/^[./]/.test(id),
+		external: id => !/^[./]/.test(id) && !id.startsWith(__dirname),
 	})
 }
 
