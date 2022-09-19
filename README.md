@@ -1,6 +1,6 @@
 # Vite Plugin Babel
 
-Run Babel during any Vite command, also during serve.
+Run Babel during any Vite command, also during serve. It`s a fork from [vite-plugin-babel](https://www.npmjs.com/package/vite-plugin-babel) and make it supports Node 12.
 
 ## Motivations
 
@@ -10,10 +10,10 @@ Most Vite plugins runs Babel only during `build`, not `serve`, and only other po
 
 ```bash
 # yarn
-yarn add -D vite-plugin-babel
+yarn add -D @minar-kotonoha/vite-plugin-babel
 
 # npm
-npm install -D vite-plugin-babel
+npm install -D @minar-kotonoha/vite-plugin-babel
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ Add it to your Vite config
 
 ```js
 import { defineConfig } from 'vite';
-import babel from 'vite-plugin-babel';
+import babel from '@minar-kotonoha/vite-plugin-babel';
 
 export default defineConfig({
     plugins: [

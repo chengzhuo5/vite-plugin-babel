@@ -24,7 +24,7 @@ const bundle = (format: FormatType) => {
 			exports: 'named'
 		},
 
-		plugins: format == 'dts' ? [dts()] : [esbuild({ target: 'es2020' })],
+		plugins: format == 'dts' ? [dts()] : [esbuild({ target: 'node12' })],
 
 		external: id => !/^[./]/.test(id),
 	})
